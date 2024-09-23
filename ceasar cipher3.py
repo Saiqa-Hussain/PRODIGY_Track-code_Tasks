@@ -1,6 +1,6 @@
 def ceasar_cipher():
-    ed = input ("\nType 'E' for encryption and 'D' for decryption:\n")
-    if ed == 'e' or 'E':
+    ed = input ("\nType 'E' for encryption and 'D' for decryption:\n").lower()
+    if ed == 'e':
         text= input ("\nEnter text for encryption, note(This will only encrypt alphabetic characters, special characters will remain as it is):\n ")
         
         shift = int(input("\nEnter shift key:\n"))
@@ -18,7 +18,7 @@ def ceasar_cipher():
             else:
                 encrypted_text+= i
         print ("\nEncrypted text is:\n" ,encrypted_text)
-    elif ed == 'd' or 'D':   
+    elif ed == 'd':   
         text= input("\nEnter text for decryption:   ")
         shift = int (input("\nEnter shift key :\n"))
         decrypted_text= ""
@@ -38,7 +38,7 @@ def ceasar_cipher():
     else:
         print("\nEnter Valid Text:   ")
 
-    ask_again= input("\nDo you want more try   (y/n):   \n")
+    ask_again= input("\nDo you want more try   (y/n):   \n").lower()
     if ask_again == 'y':
         
         ceasar_cipher()
